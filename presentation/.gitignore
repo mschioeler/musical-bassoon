@@ -1,2 +1,14 @@
 *.swp
 *.log
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.fdb_latexmk
+*.fls
+*.nav
+*.out
+*.snm
+*.tex.bbl
+*.tex.blg
+*.toc
