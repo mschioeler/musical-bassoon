@@ -32,6 +32,15 @@
 %\definecolor{main}{RGB}{92, 138, 168}
 %\definecolor{background}{RGB}{240, 247, 255}
 
+% Dynamic outline
+\AtBeginSection[]
+{%
+  \begin{frame}<beamer>
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
 %------------------------------------------------
 
 \usepackage{booktabs} % Required for better table rules
@@ -71,6 +80,10 @@
 
 \begin{frame}
 	\maketitle % Automatically created using the information in the commands above
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents
 \end{frame}
 
 \section{Introduction}
