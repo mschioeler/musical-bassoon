@@ -37,6 +37,17 @@
 \usepackage{booktabs} % Required for better table rules
 
 %----------------------------------------------------------------------------------------
+%	 CUSTOM COMMANDS
+%----------------------------------------------------------------------------------------
+
+% full bleed: full image slide
+\newcommand{\fullbleed}[1]{%
+  \begin{center}
+    \includegraphics[height=0.8\textheight]{Images/#1}
+  \end{center}
+}
+
+%----------------------------------------------------------------------------------------
 %	 TITLE SLIDE
 %----------------------------------------------------------------------------------------
 
@@ -75,6 +86,18 @@
 \section{About version control} % Section title slide, unnumbered
 
 %------------------------------------------------
+
+\begin{frame}{Local Version Control}
+  \fullbleed{local.png}
+\end{frame}
+
+\begin{frame}{Centralized Version Control}
+  \fullbleed{centralized.png}
+\end{frame}
+
+\begin{frame}{Distributed Version Control}
+  \fullbleed{distributed.png}
+\end{frame}
 
 \begin{frame}{Simple Slide}
 	This is a simple slide.
