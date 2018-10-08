@@ -55,6 +55,13 @@
     \includegraphics[height=0.8\textheight]{Images/#1}
   \end{center}
 }
+\newcommand{\widefullbleed}[1]{%
+  \begin{center}
+    \includegraphics[width=0.99\textwidth]{Images/#1}
+  \end{center}
+}
+
+\newcommand{\code}[1]{\texttt{#1}}
 
 %----------------------------------------------------------------------------------------
 %	 TITLE SLIDE
@@ -68,7 +75,7 @@
 
 \titlegraphic{\vfill\vspace{1.5cm}%
 \includegraphics[width=0.4\paperwidth]{Images/git-logo.png}\\%
-\texttt{-{}-distributed-is-the-new-centralized}} % Optional title page image, comment this line to remove it
+\code{-{}-distributed-is-the-new-centralized}} % Optional title page image, comment this line to remove it
 
 \institute{Developer Community\\Deloitte Consulting}
 
@@ -124,18 +131,33 @@
 \section{Deltas vs.\ snapshots}% Section title slide, unnumbered
 
 \begin{frame}{Deltas}
-  \fullbleed{deltas.png}
+  \widefullbleed{deltas.png}
 \end{frame}
 
 \begin{frame}{Snapshots}
-  \fullbleed{snapshots.png}
+  \widefullbleed{snapshots.png}
 \end{frame}
 
 \begin{frame}{The Git object model}
-  \fullbleed{commit-and-tree.png}
+  \widefullbleed{commit-and-tree.png}
 \end{frame}
 
+\section{Commands}
+
+\newcommand{\commandSlide}[1]{%
+  \begin{frame}{\code{git #1}}
+  \end{frame}
+}
+\commandSlide{init}
+\commandSlide{status}
+\commandSlide{add}
+\commandSlide{commit}
+\commandSlide{branch}
+\commandSlide{checkout}
+
 %------------------------------------------------
+
+\section{Template examples}
 
 \begin{frame}[plain]{Plain Slide}
 	This is a slide with the plain style and it is numbered.
@@ -166,24 +188,16 @@
 	\end{equation*}
 \end{frame}
 
-%----------------------------------------------------------------------------------------
-%	 SECTION 2
-%----------------------------------------------------------------------------------------
-
-\section{Section 2}
-
-%------------------------------------------------
-
 \begin{frame}{Blocks}
 	These blocks are part of 1 slide, to be displayed consecutively.
 	\begin{block}{Block}
 		Text.
 	\end{block}
-	\pause % Automatically creates a new "page" split between the above and above + below
+	\pause% Automatically creates a new "page" split between the above and above + below
 	\begin{alertblock}{Alert block}
 		Alert \alert{text}.
 	\end{alertblock}
-	\pause % Automatically creates a new "page" split between the above and above + below
+	\pause% Automatically creates a new "page" split between the above and above + below
 	\begin{exampleblock}{Example block}
 		Example \textcolor{example}{text}.
 	\end{exampleblock}
